@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+ 
+
+       <!-- Register -->
+    <section id="registerSection" class="active">
+      <h2>Smart Login System</h2>
+      <input type="email" id="regEmail" placeholder="Email" />
+      <input type="password" id="regPassword" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p><a href="#" onclick="showSection('loginSection')">Don’t have an account? Sign Up</a></p>
+      <p id="message"></p>
+    </section>
+
+
+    <!-- Login -->
+    <section id="loginSection">
+      <h2>Smart Login System</h2>
+      <input type="text" id="regUsername" placeholder="Username" />
+      <input type="email" id="loginEmail" placeholder="Email" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button onclick="login()">Sign Up</button>
+      <p><a href="#" onclick="showSection('registerSection')">You have an account? Signin</a></p>
+      <p id="message"></p>
+    </section>
+
+
+
+    <!-- Home -->
+    <section id="homeSection">
+      <h2 id="welcomeMsg">Welcome</h2>
+      <button onclick="logout()">Logout</button>
+    </section>
+  </div>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
