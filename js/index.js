@@ -4,7 +4,6 @@ function showSection(id) {
   document.getElementById(id).classList.add('active');
 }
 
-// تسجيل المستخدم
 function signup() {
   const username = document.getElementById("regUsername").value.trim();
   const email = document.getElementById("regEmail").value.trim();
@@ -38,7 +37,6 @@ function signup() {
   }, 1500);
 }
 
-// تسجيل الدخول
 function login() {
   const email = document.getElementById("loginEmail").value.trim();
   const password = document.getElementById("loginPassword").value;
@@ -57,13 +55,11 @@ function login() {
   showSection("homeSection");
 }
 
-// تسجيل الخروج
 function logout() {
   localStorage.removeItem("currentUser");
   showSection("loginSection");
 }
 
-// عند تحميل الصفحة، التحقق من حالة المستخدم
 window.onload = function () {
   const user = JSON.parse(localStorage.getItem("currentUser"));
   if (user) {
@@ -74,7 +70,6 @@ window.onload = function () {
   }
 };
 
-// تعديل زر التسجيل في HTML ليشتغل
 document.addEventListener("DOMContentLoaded", () => {
   const signupBtn = document.querySelector("#registerSection button");
   signupBtn.addEventListener("click", signup);
